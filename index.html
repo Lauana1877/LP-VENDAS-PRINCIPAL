@@ -89,7 +89,11 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 		<div class="elementor-element elementor-element-928a865 e-con-full e-flex e-con e-child" data-id="928a865" data-element_type="container" data-settings="{" content_width":"full"}"="">
 				<div class="elementor-element elementor-element-294c80d elementor-widget elementor-widget-html" data-id="294c80d" data-element_type="widget" data-widget_type="html.default">
 				<div class="elementor-widget-container">
-
+<div id="modalOverlay" onclick="closeIframe()"></div>
+<div id="modalContainer">
+    <span class="close-btn" onclick="closeIframe()">×</span>
+    <iframe src="about:blank" id="modalIframe"></iframe>
+</div>
 <script>
     // Mostrar o popup com o iframe após 3 segundos
     setTimeout(function() {
