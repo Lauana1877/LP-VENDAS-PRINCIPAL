@@ -2,22 +2,6 @@
 	<meta charset="UTF-8">
 		<title>Viva Sorte Oficial</title>
 <meta name="robots" content="max-image-preview:large">
-	<script src="https://cdn.utmify.com.br/scripts/utms/latest.js"></script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Certifique-se de que o UTM esteja totalmente carregado antes de adicionar a funcionalidade do carrinho
-    function adicionarAoCarrinho(link) {
-      window.location.href = link + "?" + new URLSearchParams(window.location.search);
-    }
-
-    // Adicione um tempo de atraso para garantir que o script UTM seja totalmente inicializado
-    setTimeout(function() {
-      // Seu código para adicionar itens ao carrinho pode ir aqui
-      // Certifique-se de que o link esteja correto e não cause o piscar do popup
-    }, 1000); // Ajuste o tempo de atraso conforme necessário
-  });
-</script>
 <script>
 window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/leanleapwheightloss.online\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.5.4"}};
 /*! This file is auto-generated */
@@ -56,83 +40,85 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
   a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
   document.head.appendChild(a);
 </script>
-	<div id="modalOverlay" onclick="closeIframe()"></div>
-<div id="modalContainer">
-    <span class="close-btn" onclick="closeIframe()">×</span>
-    <iframe src="about:blank" id="modalIframe"></iframe>
-</div>
-
-<script>
-    // Mostrar o popup com o iframe após 3 segundos
-    setTimeout(function() {
-        document.getElementById("modalOverlay").style.display = "block";
-        document.getElementById("modalContainer").style.display = "block";
-        document.getElementById("modalIframe").src = "https://seugirosorteoficial.vercel.app/";
-    }, 3000);
-
-    function closeIframe() {
-        document.getElementById("modalOverlay").style.display = "none";
-        document.getElementById("modalContainer").style.display = "none";
-    }
-
-    // Ouvindo mensagens do iframe
-    window.addEventListener('message', function(event) {
-        if (event.data === 'loadingComplete') {
-            closeIframe();
+	    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
         }
-    });
-</script>
-<style>
-    body, html {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-    }
 
-    #modalOverlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.7); /* Overlay preto transparente */
-        z-index: 10;
-    }
+        #modalOverlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Overlay preto transparente */
+            z-index: 10;
+        }
 
-    #modalContainer {
-        display: none;
-        position: fixed;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%); /* Centraliza o iframe perfeitamente */
-        width: 100%; /* Largura do iframe */
-        height: 72%; /* Altura do iframe */
-        z-index: 20;
-        background: white;
-        border-radius: 80px; /* Bordas arredondadas */
-    }
+        #modalContainer {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%); /* Centraliza o iframe perfeitamente */
+            width: 80%; /* Largura do iframe */
+            height: 72%; /* Altura do iframe */
+            z-index: 20;
+            background: white;
+            border-radius: 10px; /* Bordas arredondadas */
+        }
 
-    iframe {
-        width: 100%;
-        height: 100%;
-        border: none;
-    }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
 
-    .close-btn {
-        position: absolute;
-        top: -3%;
-        right: -1%;
-        font-size: 30px;
-        cursor: pointer;
-        color: white; /* Cor do texto do botão */
-        border: none;
-        padding: 10px; /* Espaçamento interno do botão */
-        border-radius: 5px; /* Bordas arredondadas do botão */
-    }
-</style>
+        .close-btn {
+            position: absolute;
+            top: -3%;
+            right: -1%;
+            font-size: 30px;
+            cursor: pointer;
+            color: white; /* Cor do texto do botão */
+            border: none;
+            padding: 10px; /* Espaçamento interno do botão */
+            border-radius: 5px; /* Bordas arredondadas do botão */
+        }
+    </style>
+    <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" async defer></script>
+</head>
+<body>
+    <div id="modalOverlay" onclick="closeIframe()"></div>
+    <div id="modalContainer">
+        <span class="close-btn" onclick="closeIframe()">×</span>
+        <iframe src="about:blank" id="modalIframe"></iframe>
+    </div>
 
+    <script>
+        // Mostrar o popup com o iframe após 3 segundos
+        setTimeout(function() {
+            document.getElementById("modalOverlay").style.display = "block";
+            document.getElementById("modalContainer").style.display = "block";
+            document.getElementById("modalIframe").src = "https://seugirosorteoficial.vercel.app/";
+        }, 3000);
+
+        function closeIframe() {
+            document.getElementById("modalOverlay").style.display = "none";
+            document.getElementById("modalContainer").style.display = "none";
+        }
+
+        // Ouvindo mensagens do iframe
+        window.addEventListener('message', function(event) {
+            if (event.data === 'loadingComplete') {
+                closeIframe();
+            }
+        });
+    </script>
 <link rel="stylesheet" id="hello-elementor-css" href="css/style.min.css" media="all">
 <link rel="stylesheet" id="hello-elementor-theme-style-css" href="css/theme.min.css" media="all">
 <link rel="stylesheet" id="hello-elementor-header-footer-css" href="css/header-footer.min.css" media="all">
