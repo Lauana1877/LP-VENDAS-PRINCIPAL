@@ -2,15 +2,22 @@
 	<meta charset="UTF-8">
 		<title>Viva Sorte Oficial</title>
 <meta name="robots" content="max-image-preview:large">
-	<script>
+	<script src="https://cdn.utmify.com.br/scripts/utms/latest.js"></script>
+
+<script>
   document.addEventListener('DOMContentLoaded', function() {
-    var script = document.createElement('script');
-    script.src = 'https://cdn.utmify.com.br/scripts/utms/latest.js';
-    script.async = true;
-    script.defer = true;
-    document.head.appendChild(script);
+    // Certifique-se de que o UTM esteja totalmente carregado antes de adicionar a funcionalidade do carrinho
+    function adicionarAoCarrinho(link) {
+      window.location.href = link + "?" + new URLSearchParams(window.location.search);
+    }
+
+    // Adicione um tempo de atraso para garantir que o script UTM seja totalmente inicializado
+    setTimeout(function() {
+      // Seu código para adicionar itens ao carrinho pode ir aqui
+      // Certifique-se de que o link esteja correto e não cause o piscar do popup
+    }, 1000); // Ajuste o tempo de atraso conforme necessário
   });
-	</script>
+</script>
 <script>
 window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/leanleapwheightloss.online\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.5.4"}};
 /*! This file is auto-generated */
