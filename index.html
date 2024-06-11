@@ -457,10 +457,8 @@ margin-top: 10px; /* Espaço acima do subtítulo */
         }
 
         function adicionarAoCarrinho(link) {
-            showPreloader(function() {
-                window.location.href = link;
-            });
-        }
+        window.location.href = link + "?" + new URLSearchParams(window.location.search);
+    }
 
         // Bloqueie a entrada manual no campo de entrada
         document.getElementById('numero').addEventListener('input', function () {
