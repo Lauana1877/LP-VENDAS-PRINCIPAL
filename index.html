@@ -89,17 +89,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 		<div class="elementor-element elementor-element-928a865 e-con-full e-flex e-con e-child" data-id="928a865" data-element_type="container" data-settings="{" content_width":"full"}"="">
 				<div class="elementor-element elementor-element-294c80d elementor-widget elementor-widget-html" data-id="294c80d" data-element_type="widget" data-widget_type="html.default">
 				<div class="elementor-widget-container">
-			<div id="modalOverlay" onclick="closeIframe()"></div>
-<div id="modalContainer">
-    <span class="close-btn" onclick="closeIframe()">×</span>
-    <iframe src="about:blank" id="modalIframe"></iframe>
-</div>
 
-<div id="modalOverlay"></div>
-<div id="modalContainer">
-    <button class="close-btn" onclick="closeIframe()">×</button>
-    <iframe id="modalIframe" src=""></iframe>
-</div>
 <div id="modalOverlay"></div>
 <div id="modalContainer">
     <button class="close-btn" onclick="closeIframe()">×</button>
@@ -110,13 +100,14 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
     setTimeout(function() {
         document.getElementById("modalOverlay").style.display = "block";
         document.getElementById("modalContainer").style.display = "block";
-        document.getElementById("modalIframe").src = "https://seugirosorteoficial.vercel.app/";
+        if (!document.getElementById("modalIframe").src) {
+            document.getElementById("modalIframe").src = "https://seugirosorteoficial.vercel.app/";
+        }
     }, 3000);
 
     function closeIframe() {
         document.getElementById("modalOverlay").style.display = "none";
         document.getElementById("modalContainer").style.display = "none";
-        document.getElementById("modalIframe").src = ""; // Limpa o src do iframe para parar o carregamento
     }
 
     // Ouvindo mensagens do iframe
@@ -126,6 +117,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
         }
     });
 </script>
+
 
    <style>
     body, html {
@@ -152,12 +144,11 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%); /* Centraliza o iframe perfeitamente */
-        width: 80%; /* Ajuste a largura conforme necessário */
-        height: 80%; /* Ajuste a altura conforme necessário */
+        width: 100%; /* Largura do iframe */
+        height: 72%; /* Altura do iframe */
         z-index: 20;
         background: white;
-        border-radius: 20px; /* Bordas arredondadas */
-        overflow: hidden;
+        border-radius: 80px; /* Bordas arredondadas */
     }
 
     iframe {
@@ -168,13 +159,14 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
     .close-btn {
         position: absolute;
-        top: 10px;
-        right: 10px;
-        font-size: 24px;
+        top: -3%;
+        right: -1%;
+        font-size: 30px;
         cursor: pointer;
-        color: black; /* Cor do texto do botão */
-        background: none; /* Sem fundo */
+        color: white; /* Cor do texto do botão */
         border: none;
+        padding: 10px; /* Espaçamento interno do botão */
+        border-radius: 5px; /* Bordas arredondadas do botão */
     }
 </style>
 
