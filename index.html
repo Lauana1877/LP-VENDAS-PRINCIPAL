@@ -206,14 +206,13 @@ margin-top: 10px; /* Espaço acima do subtítulo */
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Preload Example</title>
     <style>
-        body, html {
+    body, html {
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
             background-color: #f3f3f3;
         }
-
         #preloader {
             position: fixed;
             top: 0;
@@ -225,33 +224,26 @@ margin-top: 10px; /* Espaço acima do subtítulo */
             align-items: center;
             justify-content: center;
             z-index: 9999;
-        }
-
-        .preload-content {
-            display: flex;
             flex-direction: column;
-            align-items: center;
+            display: none;
         }
-
         .preload-image {
             width: 150px;
             height: 150px;
-            background: url('https://i.postimg.cc/TwJs4FwX/waving-halfbody-inverted-51ffd2bc.webp') no-repeat center center;
+            background: url('images/shortcut-icon-fb50ab40.webp') no-repeat center center;
             background-size: contain;
             animation: blink 2s linear infinite;
         }
-
         .additional-image {
-            width: 200px;
-            margin-bottom: 20px;
-            animation: blink-twice 4s ease-in-out;
-        }
+    width: 200px;
+    margin-bottom: 20px;
+    animation: blink-twice 4s ease-in-out; /* Aumentei o tempo de 2s para 4s para ficar mais lento */
+}
 
-        @keyframes blink-twice {
-            0%, 25%, 75%, 100% { opacity: 1; }
-            12.5%, 37.5%, 62.5%, 87.5% { opacity: 0; }
-        }
-
+@keyframes blink-twice {
+    0%, 25%, 75%, 100% { opacity: 1; }
+    12.5%, 37.5%, 62.5%, 87.5% { opacity: 0; }
+}
         .preload-text {
             margin-top: 5px;
             font-size: 24px;
@@ -263,17 +255,12 @@ margin-top: 10px; /* Espaço acima do subtítulo */
 </head>
 <body>
     <div id="preloader">
-        <div class="preload-content">
-            <img src="https://i.postimg.cc/TwJs4FwX/waving-halfbody-inverted-51ffd2bc.webp" alt="Waving" class="additional-image">
-            <div class="preload-text">Por favor, atualize a página <br>após a confirmação do pagamento.</div>
-        </div>
+        <img src="https://i.postimg.cc/TwJs4FwX/waving-halfbody-inverted-51ffd2bc.webp" alt="Waving" class="additional-image">
+        <div class="preload-text">Por favor, atualize a página <br>após a confirmação do pagamento.</div>
         <div class="preload-image"></div>
     </div>
 
     <div class="cotas">
-        <!-- ... [conteúdo dos botões omitido para brevidade] ... -->
-                 <!--      <h3>Comprar mais títulos aumenta suas chances de ganhar!</h3> -->
-    
         <div class="cotas-one">
             <button type="button" class="cota" onclick="selecionarValor(15)">
                 <div class="cota-qtd">
