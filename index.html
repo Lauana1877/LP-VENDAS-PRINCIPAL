@@ -227,36 +227,10 @@ margin-top: 10px; /* Espaço acima do subtítulo */
             flex-direction: column;
             display: none;
         }
-        .preload-image {
-            width: 150px;
-            height: 150px;
-            background: url('images/shortcut-icon-fb50ab40.webp') no-repeat center center;
-            background-size: contain;
-            animation: blink 2s linear infinite;
-        }
-        .additional-image {
-    width: 200px;
-    margin-bottom: 20px;
-    animation: blink-twice 4s ease-in-out; /* Aumentei o tempo de 2s para 4s para ficar mais lento */
-}
-
-@keyframes blink-twice {
-    0%, 25%, 75%, 100% { opacity: 1; }
-    12.5%, 37.5%, 62.5%, 87.5% { opacity: 0; }
-}
-        .preload-text {
-            margin-top: 5px;
-            font-size: 24px;
-            color: #2F2F2F;
-            text-align: center;
-            letter-spacing: -0.5px;
-        }
-    </style>
 </head>
 <body>
     <div id="preloader">
-        <img src="https://i.postimg.cc/TwJs4FwX/waving-halfbody-inverted-51ffd2bc.webp" alt="Waving" class="additional-image">
-        <div class="preload-text">Por favor, atualize a página <br>após a confirmação do pagamento.</div>
+        <div class="preload-text">CARREGANDO....<br>Por favor, atualize a página <br>após a confirmação do pagamento.</div>
         <div class="preload-image"></div>
     </div>
 
